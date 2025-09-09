@@ -1,0 +1,11 @@
+package ch07.exam5.a;	//A.java와 같은 패키지
+
+public class B {
+	//메소드 선언
+	public void method() {
+		A a = new A();	//가능
+		a.field = "value";	//가능
+		a.method();	//가능
+	}
+
+}
