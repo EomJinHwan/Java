@@ -1,0 +1,32 @@
+package ch08.exam3;
+
+public class Audio implements RemoteControl{
+	//필드
+	private int voluem;
+	
+	//turnOn() 추상 메소드 오버라이딩
+		@Override
+		public void turnOn() {
+			System.out.println("Audio On");
+		}
+		
+		//turnOff() 추상 메소드 오버라이딩
+		@Override
+		public void turnOff() {
+			System.out.println("Audio Off");
+		}
+		
+		//setVolume() 추상 메소드 오버라이딩
+		@Override
+		public void setVolume(int volume) {
+			if(volume>RemoteControl.MAX_VOLUME) {
+				this.voluem = RemoteControl.MAX_VOLUME;
+			} else if(volume<RemoteControl.MIN_VOLUME) {
+				this.voluem = RemoteControl.MIN_VOLUME;
+			} else {
+				this.voluem = volume;
+			}
+			System.out.println("현재 Audio 볼륨 : " + this.voluem);
+		}
+
+}
